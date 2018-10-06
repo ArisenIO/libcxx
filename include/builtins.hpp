@@ -4,7 +4,7 @@
 #include <type_traits>
 
 /**
- * EOS-specific header.
+ * ARISEN-specific header.
  *
  * Implimentation for compiler builtin functions. Theoretically Clang should
  * generate inline code for calls to these functions. And the generated code should
@@ -13,7 +13,7 @@
  * So, this file contains a workaround.
  * The builtins can be used with any types. But this file contains only functions needed
  * for libc++. To use the builtins with other types add implimentations to this file.
- * (I've tried to write a template which should work for any types, but it didn't work out) 
+ * (I've tried to write a template which should work for any types, but it didn't work out)
  */
 
 inline int __sync_lock_test_and_set( int* ptr, int val ) {
